@@ -1,3 +1,10 @@
+button {
+  padding: 10px;
+  background-color: #022F40;
+  color: white;
+  width: 100%;
+}
+
 .team-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -18,11 +25,4 @@
       font-size: 40px;
       margin: 15px;
   }
-}
-
-button {
-  padding: 10px;
-  background-color: #022F40;
-  color: white;
-  width: 100%;
 }

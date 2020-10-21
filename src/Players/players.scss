@@ -1,3 +1,10 @@
+button {
+  padding: 10px;
+  background-color: #022F40;
+  color: white;
+  width: 100%;
+}
+
 .player-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -8,6 +15,10 @@
     border: 2px solid;
     padding: 5px;
     margin: 5px;
+
+    button {
+      width: 50%;
+    }
   }
 
   img {
@@ -23,11 +34,4 @@
       font-size: 30px;
       margin: 15px;
   }
-}
-
-button {
-  padding: 10px;
-  background-color: #022F40;
-  color: white;
-  width: 100%;
 }

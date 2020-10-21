@@ -1,12 +1,12 @@
 import React, { useState } from 'react'
 
-const PlayerForm = (props) => {
-	const [formData, setFormData] = useState(props.players)
+const TeamForm = (props) => {
+	const [formData, setFormData] = useState(props.team)
 
 	const handleSubmit = (event) => {
 		event.preventDefault()
 		props.handleSubmit(formData)
-		props.history.push('/players')
+		props.history.push('/team')
 	}
 
 	const handleChange = (event) => {
@@ -18,7 +18,7 @@ const PlayerForm = (props) => {
 			<input
 				type='text'
 				name='name'
-				placeholder='Player Name'
+				placeholder='Team Name'
 				value={formData.name}
 				onChange={handleChange}
 			/>
@@ -29,16 +29,9 @@ const PlayerForm = (props) => {
 				value={formData.img}
 				onChange={handleChange}
 			/>
-			<input
-				type='text'
-				name='role'
-				placeholder='Role'
-				value={formData.role}
-				onChange={handleChange}
-			/>
 			<input type='submit' value={props.label} />
 		</form>
 	)
 }
 
-export default PlayerForm
+export default TeamForm

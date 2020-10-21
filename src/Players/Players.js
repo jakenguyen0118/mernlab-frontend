@@ -1,6 +1,6 @@
 import React from 'react'
 import './players.scss'
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Players = (props) => {
 	const { players } = props
@@ -20,10 +20,18 @@ const Players = (props) => {
 							<h3>Position: {player.role}</h3>
 							<button
 								onClick={() => {
-									props.deletePlayer(players)
+									props.deletePlayer(player)
 								}}>
 								Delete
 							</button>
+							<Link to='/players/edit'>
+								<button
+									onClick={() => {
+										props.selectPlayer(player)
+									}}>
+									Edit
+								</button>
+							</Link>
 						</div>
 					</div>
 				))}
@@ -31,7 +39,13 @@ const Players = (props) => {
 		</div>
 	)
 
-	return players.length > 0 ? loaded() : <h1>Please hold...</h1>
+	return players.length > 0 ? (
+		loaded()
+	) : (
+		<Link to='/players/create'>
+			<button>Add Player</button>
+		</Link>
+	)
 }
 
 export default Players
