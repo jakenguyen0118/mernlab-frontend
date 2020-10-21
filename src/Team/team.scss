@@ -1,0 +1,21 @@
+.team-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 5px;
+  margin: 5px;
+
+  .team {
+    border: 2px solid;
+    padding: 5px;
+    margin: 5px;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  h2 {
+      font-size: 40px;
+      margin: 15px;
+  }
+}

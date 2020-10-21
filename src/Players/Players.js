@@ -1,5 +1,7 @@
 import React from 'react'
 import './players.scss'
+import { Button } from 'react-bootstrap'
+
 
 const Players = (props) => {
 	const { players } = props
@@ -19,7 +21,7 @@ const Players = (props) => {
 		</div>
 	)
 
-	return players.length > 0 ? loaded() : <h1>Please hold...</h1>
+	return (players.length > 0 ? loaded() : <h1>Please hold...</h1>)
 }
 
 export default Players
