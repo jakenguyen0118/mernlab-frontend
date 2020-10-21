@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Route, Link, Switch } from 'react-router-dom'
 import './App.scss'
-import Players from './Players'
+import Players from './Players/Players'
+import Home from './Home/Home'
 
 function App() {
 	const url = 'https://jnmernlab.herokuapp.com'
@@ -21,9 +22,12 @@ function App() {
   return (
     <div className='App'>
       <Switch>
+        <Route exact path='/'>
+          <Home />
+        </Route>
         <Route
           exact
-          path='/'
+          path='/players'
           render={(routerProps) => <Players {...routerProps} players={players} />}
         />
       </Switch>

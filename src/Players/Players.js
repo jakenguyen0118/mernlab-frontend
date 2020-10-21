@@ -1,5 +1,5 @@
 import React from 'react'
-import './App.scss'
+import './players.scss'
 
 const Players = (props) => {
 	const { players } = props
@@ -12,6 +12,7 @@ const Players = (props) => {
 					<div>
 						<h2>{player.name}</h2>
 						<h3>Position: {player.role}</h3>
+                        <img src={player.img} />
 					</div>
 				</div>
 			))}
